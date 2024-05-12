@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE gxl SYSTEM "http://gin.univ-mrs.fr/GINsim/GINML_2_1.dtd">
+<gxl>
+  <graph id="defaultID" class="regulatory" nodeorder="DNA_Damage ATM AMPK Mdm2 p53 p53_A p53INP1 p53_K miR_21 PTEN PTENP1 AKT BMI1 p21 RKIP Wee1 Sirt1 Wip1 Myc mTOR1 mTOR2 RB E2F1 Cdc25 Cdk2_CycA2 Cdk1_CycB BCL2 BAX Caspase3 ULK1 NFKB YY1 EZH2 SNAIL ZEB1 VIM1 CDH1 DRUG_RESISTANCE CYCLE_ARREST SENESCENCE AUTOPHAGY APOPTOSIS EMT">
+    <node id="DNA_Damage" maxvalue="1">
+      <parameter val="1" idActiveInteractions="DNA_Damage:DNA_Damage:1"/>
+      <annotation>
+        <comment>DNA_Damage is an input node marked with an auto-regulation.</comment>
+      </annotation>
+    </node>
+    <node id="ATM" maxvalue="1">
+      <parameter val="1" idActiveInteractions="DNA_Damage:ATM:1"/>
+      <parameter val="1" idActiveInteractions="DNA_Damage:ATM:1 Cdc25:ATM:1"/>
+      <parameter val="1" idActiveInteractions="DNA_Damage:ATM:1 E2F1:ATM:1"/>
+      <parameter val="1" idActiveInteractions="DNA_Damage:ATM:1 E2F1:ATM:1 Cdc25:ATM:1"/>
+      <parameter val="1" idActiveInteractions="DNA_Damage:ATM:1 Wip1:ATM:1"/>
+      <parameter val="1" idActiveInteractions="DNA_Damage:ATM:1 Wip1:ATM:1 E2F1:ATM:1"/>
+      <parameter val="1" idActiveInteractions="DNA_Damage:ATM:1 Wip1:ATM:1 E2F1:ATM:1 Cdc25:ATM:1"/>
+      <parameter val="1" idActiveInteractions="DNA_Damage:ATM:1 BMI1:ATM:1"/>
+      <parameter val="1" idActiveInteractions="DNA_Damage:ATM:1 BMI1:ATM:1 Cdc25:ATM:1"/>
+      <parameter val="1" idActiveInteractions="DNA_Damage:ATM:1 BMI1:ATM:1 E2F1:ATM:1"/>
+      <parameter val="1" idActiveInteractions="DNA_Damage:ATM:1 BMI1:ATM:1 E2F1:ATM:1 Cdc25:ATM:1"/>
+      <parameter val="1" idActiveInteractions="DNA_Damage:ATM:1 BMI1:ATM:1 Wip1:ATM:1 E2F1:ATM:1"/>
+      <parameter val="1" idActiveInteractions="DNA_Damage:ATM:1 BMI1:ATM:1 Wip1:ATM:1 E2F1:ATM:1 Cdc25:ATM:1"/>
+    </node>
+    <node id="AMPK" maxvalue="1">
+      <parameter val="1" idActiveInteractions="ATM:AMPK:1"/>
+    </node>
+    <node id="Mdm2" maxvalue="1">
+      <parameter val="1" idActiveInteractions="AKT:Mdm2:1"/>
+      <parameter val="1" idActiveInteractions="p53:Mdm2:1 AKT:Mdm2:1"/>
+      <parameter val="1" idActiveInteractions="p53:Mdm2:1 AKT:Mdm2:1 Wip1:Mdm2:1"/>
+    </node>
+    <node id="p53" maxvalue="1">
+      <parameter val="1" idActiveInteractions="AMPK:p53:1"/>
+      <parameter val="1" idActiveInteractions="ATM:p53:1"/>
+      <parameter val="1" idActiveInteractions="ATM:p53:1 YY1:p53:1"/>
+      <parameter val="1" idActiveInteractions="ATM:p53:1 Mdm2:p53:1"/>
+      <parameter val="1" idActiveInteractions="ATM:p53:1 Mdm2:p53:1 YY1:p53:1"/>
+      <parameter val="1" idActiveInteractions="ATM:p53:1 AMPK:p53:1"/>
+      <parameter val="1" idActiveInteractions="ATM:p53:1 AMPK:p53:1 YY1:p53:1"/>
+      <parameter val="1" idActiveInteractions="ATM:p53:1 AMPK:p53:1 Mdm2:p53:1"/>
+      <parameter val="1" idActiveInteractions="ATM:p53:1 AMPK:p53:1 Mdm2:p53:1 YY1:p53:1"/>
+    </node>
+    <node id="p53_A" maxvalue="1">
+      <parameter val="1"/>
+      <parameter val="1" idActiveInteractions="p53:p53_A:1"/>
+      <parameter val="1" idActiveInteractions="p53:p53_A:1 p53INP1:p53_A:1"/>
+    </node>
+    <node id="p53INP1" maxvalue="1">
+      <parameter val="1" idActiveInteractions="p53_K:p53INP1:1"/>
+      <parameter val="1" idActiveInteractions="p53_A:p53INP1:1"/>
+      <parameter val="1" idActiveInteractions="p53_A:p53INP1:1 p53_K:p53INP1:1"/>
+    </node>
+    <node id="p53_K" maxvalue="1">
+      <parameter val="1" idActiveInteractions="p53:p53_K:1"/>
+      <parameter val="1" idActiveInteractions="p53:p53_K:1 Wip1:p53_K:1"/>
+      <parameter val="1" idActiveInteractions="p53:p53_K:1 Sirt1:p53_K:1"/>
+    </node>
+    <node id="miR_21" maxvalue="1">
+      <parameter val="1"/>
+      <parameter val="1" idActiveInteractions="E2F1:miR_21:1"/>
+      <parameter val="1" idActiveInteractions="AKT:miR_21:1"/>
+      <parameter val="1" idActiveInteractions="AKT:miR_21:1 E2F1:miR_21:1"/>
+      <parameter val="1" idActiveInteractions="PTENP1:miR_21:1 AKT:miR_21:1 E2F1:miR_21:1"/>
+    </node>
+    <node id="PTEN" maxvalue="1">
+      <parameter val="1" idActiveInteractions="p53_K:PTEN:1"/>
+      <parameter val="1" idActiveInteractions="ATM:PTEN:1"/>
+      <parameter val="1" idActiveInteractions="ATM:PTEN:1 p53_K:PTEN:1"/>
+    </node>
+    <node id="PTENP1" maxvalue="1">
+      <parameter val="1" idActiveInteractions="PTEN:PTENP1:1"/>
+    </node>
+    <node id="AKT" maxvalue="1">
+      <parameter val="1"/>
+      <parameter val="1" idActiveInteractions="mTOR2:AKT:1"/>
+      <parameter val="1" idActiveInteractions="PTEN:AKT:1 mTOR2:AKT:1"/>
+    </node>
+    <node id="BMI1" maxvalue="1">
+      <parameter val="1"/>
+    </node>
+    <node id="p21" maxvalue="1">
+      <parameter val="1" idActiveInteractions="p53_A:p21:1"/>
+      <parameter val="1" idActiveInteractions="p53_A:p21:1 Caspase3:p21:1"/>
+      <parameter val="1" idActiveInteractions="p53_A:p21:1 E2F1:p21:1"/>
+      <parameter val="1" idActiveInteractions="p53_A:p21:1 E2F1:p21:1 Caspase3:p21:1"/>
+      <parameter val="1" idActiveInteractions="p53_A:p21:1 Myc:p21:1"/>
+      <parameter val="1" idActiveInteractions="p53_A:p21:1 Myc:p21:1 Caspase3:p21:1"/>
+      <parameter val="1" idActiveInteractions="p53_A:p21:1 Myc:p21:1 E2F1:p21:1"/>
+      <parameter val="1" idActiveInteractions="p53_A:p21:1 Myc:p21:1 E2F1:p21:1 Caspase3:p21:1"/>
+      <parameter val="1" idActiveInteractions="p53_A:p21:1 BMI1:p21:1"/>
+      <parameter val="1" idActiveInteractions="p53_A:p21:1 BMI1:p21:1 Caspase3:p21:1"/>
+      <parameter val="1" idActiveInteractions="p53_A:p21:1 BMI1:p21:1 E2F1:p21:1"/>
+      <parameter val="1" idActiveInteractions="p53_A:p21:1 BMI1:p21:1 E2F1:p21:1 Caspase3:p21:1"/>
+      <parameter val="1" idActiveInteractions="p53_A:p21:1 BMI1:p21:1 Myc:p21:1"/>
+      <parameter val="1" idActiveInteractions="p53_A:p21:1 BMI1:p21:1 Myc:p21:1 Caspase3:p21:1"/>
+      <parameter val="1" idActiveInteractions="p53_A:p21:1 BMI1:p21:1 Myc:p21:1 E2F1:p21:1"/>
+      <parameter val="1" idActiveInteractions="p53_A:p21:1 BMI1:p21:1 Myc:p21:1 E2F1:p21:1 Caspase3:p21:1"/>
+      <parameter val="1" idActiveInteractions="p53_A:p21:1 AKT:p21:1"/>
+      <parameter val="1" idActiveInteractions="p53_A:p21:1 AKT:p21:1 Caspase3:p21:1"/>
+      <parameter val="1" idActiveInteractions="p53_A:p21:1 AKT:p21:1 E2F1:p21:1"/>
+      <parameter val="1" idActiveInteractions="p53_A:p21:1 AKT:p21:1 E2F1:p21:1 Caspase3:p21:1"/>
+      <parameter val="1" idActiveInteractions="p53_A:p21:1 AKT:p21:1 Myc:p21:1"/>
+      <parameter val="1" idActiveInteractions="p53_A:p21:1 AKT:p21:1 Myc:p21:1 Caspase3:p21:1"/>
+      <parameter val="1" idActiveInteractions="p53_A:p21:1 AKT:p21:1 Myc:p21:1 E2F1:p21:1"/>
+      <parameter val="1" idActiveInteractions="p53_A:p21:1 AKT:p21:1 Myc:p21:1 E2F1:p21:1 Caspase3:p21:1"/>
+      <parameter val="1" idActiveInteractions="p53_A:p21:1 AKT:p21:1 BMI1:p21:1"/>
+      <parameter val="1" idActiveInteractions="p53_A:p21:1 AKT:p21:1 BMI1:p21:1 Caspase3:p21:1"/>
+      <parameter val="1" idActiveInteractions="p53_A:p21:1 AKT:p21:1 BMI1:p21:1 E2F1:p21:1"/>
+      <parameter val="1" idActiveInteractions="p53_A:p21:1 AKT:p21:1 BMI1:p21:1 E2F1:p21:1 Caspase3:p21:1"/>
+      <parameter val="1" idActiveInteractions="p53_A:p21:1 AKT:p21:1 BMI1:p21:1 Myc:p21:1"/>
+      <parameter val="1" idActiveInteractions="p53_A:p21:1 AKT:p21:1 BMI1:p21:1 Myc:p21:1 Caspase3:p21:1"/>
+      <parameter val="1" idActiveInteractions="p53_A:p21:1 AKT:p21:1 BMI1:p21:1 Myc:p21:1 E2F1:p21:1"/>
+      <parameter val="1" idActiveInteractions="p53_A:p21:1 AKT:p21:1 BMI1:p21:1 Myc:p21:1 E2F1:p21:1 Caspase3:p21:1"/>
+      <parameter val="1" idActiveInteractions="AMPK:p21:1"/>
+      <parameter val="1" idActiveInteractions="AMPK:p21:1 Caspase3:p21:1"/>
+      <parameter val="1" idActiveInteractions="AMPK:p21:1 AKT:p21:1"/>
+      <parameter val="1" idActiveInteractions="AMPK:p21:1 p53_A:p21:1"/>
+      <parameter val="1" idActiveInteractions="AMPK:p21:1 p53_A:p21:1 Caspase3:p21:1"/>
+      <parameter val="1" idActiveInteractions="AMPK:p21:1 p53_A:p21:1 E2F1:p21:1"/>
+      <parameter val="1" idActiveInteractions="AMPK:p21:1 p53_A:p21:1 E2F1:p21:1 Caspase3:p21:1"/>
+      <parameter val="1" idActiveInteractions="AMPK:p21:1 p53_A:p21:1 Myc:p21:1"/>
+      <parameter val="1" idActiveInteractions="AMPK:p21:1 p53_A:p21:1 Myc:p21:1 Caspase3:p21:1"/>
+      <parameter val="1" idActiveInteractions="AMPK:p21:1 p53_A:p21:1 Myc:p21:1 E2F1:p21:1"/>
+      <parameter val="1" idActiveInteractions="AMPK:p21:1 p53_A:p21:1 Myc:p21:1 E2F1:p21:1 Caspase3:p21:1"/>
+      <parameter val="1" idActiveInteractions="AMPK:p21:1 p53_A:p21:1 BMI1:p21:1"/>
+      <parameter val="1" idActiveInteractions="AMPK:p21:1 p53_A:p21:1 BMI1:p21:1 Caspase3:p21:1"/>
+      <parameter val="1" idActiveInteractions="AMPK:p21:1 p53_A:p21:1 BMI1:p21:1 E2F1:p21:1"/>
+      <parameter val="1" idActiveInteractions="AMPK:p21:1 p53_A:p21:1 BMI1:p21:1 E2F1:p21:1 Caspase3:p21:1"/>
+      <parameter val="1" idActiveInteractions="AMPK:p21:1 p53_A:p21:1 BMI1:p21:1 Myc:p21:1"/>
+      <parameter val="1" idActiveInteractions="AMPK:p21:1 p53_A:p21:1 BMI1:p21:1 Myc:p21:1 Caspase3:p21:1"/>
+      <parameter val="1" idActiveInteractions="AMPK:p21:1 p53_A:p21:1 BMI1:p21:1 Myc:p21:1 E2F1:p21:1"/>
+      <parameter val="1" idActiveInteractions="AMPK:p21:1 p53_A:p21:1 BMI1:p21:1 Myc:p21:1 E2F1:p21:1 Caspase3:p21:1"/>
+      <parameter val="1" idActiveInteractions="AMPK:p21:1 p53_A:p21:1 AKT:p21:1"/>
+      <parameter val="1" idActiveInteractions="AMPK:p21:1 p53_A:p21:1 AKT:p21:1 Caspase3:p21:1"/>
+      <parameter val="1" idActiveInteractions="AMPK:p21:1 p53_A:p21:1 AKT:p21:1 E2F1:p21:1"/>
+      <parameter val="1" idActiveInteractions="AMPK:p21:1 p53_A:p21:1 AKT:p21:1 E2F1:p21:1 Caspase3:p21:1"/>
+      <parameter val="1" idActiveInteractions="AMPK:p21:1 p53_A:p21:1 AKT:p21:1 Myc:p21:1"/>
+      <parameter val="1" idActiveInteractions="AMPK:p21:1 p53_A:p21:1 AKT:p21:1 Myc:p21:1 Caspase3:p21:1"/>
+      <parameter val="1" idActiveInteractions="AMPK:p21:1 p53_A:p21:1 AKT:p21:1 Myc:p21:1 E2F1:p21:1"/>
+      <parameter val="1" idActiveInteractions="AMPK:p21:1 p53_A:p21:1 AKT:p21:1 Myc:p21:1 E2F1:p21:1 Caspase3:p21:1"/>
+      <parameter val="1" idActiveInteractions="AMPK:p21:1 p53_A:p21:1 AKT:p21:1 BMI1:p21:1"/>
+      <parameter val="1" idActiveInteractions="AMPK:p21:1 p53_A:p21:1 AKT:p21:1 BMI1:p21:1 Caspase3:p21:1"/>
+      <parameter val="1" idActiveInteractions="AMPK:p21:1 p53_A:p21:1 AKT:p21:1 BMI1:p21:1 E2F1:p21:1"/>
+      <parameter val="1" idActiveInteractions="AMPK:p21:1 p53_A:p21:1 AKT:p21:1 BMI1:p21:1 E2F1:p21:1 Caspase3:p21:1"/>
+      <parameter val="1" idActiveInteractions="AMPK:p21:1 p53_A:p21:1 AKT:p21:1 BMI1:p21:1 Myc:p21:1"/>
+      <parameter val="1" idActiveInteractions="AMPK:p21:1 p53_A:p21:1 AKT:p21:1 BMI1:p21:1 Myc:p21:1 Caspase3:p21:1"/>
+      <parameter val="1" idActiveInteractions="AMPK:p21:1 p53_A:p21:1 AKT:p21:1 BMI1:p21:1 Myc:p21:1 E2F1:p21:1"/>
+      <parameter val="1" idActiveInteractions="AMPK:p21:1 p53_A:p21:1 AKT:p21:1 BMI1:p21:1 Myc:p21:1 E2F1:p21:1 Caspase3:p21:1"/>
+    </node>
+    <node id="RKIP" maxvalue="1">
+      <parameter val="1" idActiveInteractions="p53_A:RKIP:1"/>
+    </node>
+    <node id="Wee1" maxvalue="1">
+      <parameter val="1"/>
+    </node>
+    <node id="Sirt1" maxvalue="1">
+      <parameter val="1" idActiveInteractions="E2F1:Sirt1:1"/>
+    </node>
+    <node id="Wip1" maxvalue="1">
+      <parameter val="1" idActiveInteractions="p53_A:Wip1:1"/>
+    </node>
+    <node id="Myc" maxvalue="1">
+      <parameter val="1" idActiveInteractions="E2F1:Myc:1"/>
+      <parameter val="1" idActiveInteractions="AKT:Myc:1"/>
+      <parameter val="1" idActiveInteractions="AKT:Myc:1 E2F1:Myc:1"/>
+      <parameter val="1" idActiveInteractions="AMPK:Myc:1"/>
+      <parameter val="1" idActiveInteractions="AMPK:Myc:1 E2F1:Myc:1"/>
+      <parameter val="1" idActiveInteractions="AMPK:Myc:1 AKT:Myc:1"/>
+      <parameter val="1" idActiveInteractions="AMPK:Myc:1 AKT:Myc:1 E2F1:Myc:1"/>
+    </node>
+    <node id="mTOR1" maxvalue="1">
+      <parameter val="1" idActiveInteractions="AKT:mTOR1:1"/>
+      <parameter val="1" idActiveInteractions="AKT:mTOR1:1 ULK1:mTOR1:1"/>
+      <parameter val="1" idActiveInteractions="AMPK:mTOR1:1 AKT:mTOR1:1"/>
+    </node>
+    <node id="mTOR2" maxvalue="1">
+      <parameter val="1"/>
+      <parameter val="1" idActiveInteractions="mTOR1:mTOR2:1"/>
+      <parameter val="1" idActiveInteractions="Sirt1:mTOR2:1"/>
+      <parameter val="1" idActiveInteractions="Sirt1:mTOR2:1 mTOR1:mTOR2:1"/>
+      <parameter val="1" idActiveInteractions="AKT:mTOR2:1"/>
+      <parameter val="1" idActiveInteractions="AKT:mTOR2:1 mTOR1:mTOR2:1"/>
+      <parameter val="1" idActiveInteractions="AKT:mTOR2:1 Sirt1:mTOR2:1"/>
+      <parameter val="1" idActiveInteractions="AKT:mTOR2:1 Sirt1:mTOR2:1 mTOR1:mTOR2:1"/>
+      <parameter val="1" idActiveInteractions="PTEN:mTOR2:1 AKT:mTOR2:1"/>
+      <parameter val="1" idActiveInteractions="PTEN:mTOR2:1 AKT:mTOR2:1 mTOR1:mTOR2:1"/>
+      <parameter val="1" idActiveInteractions="PTEN:mTOR2:1 AKT:mTOR2:1 Sirt1:mTOR2:1"/>
+      <parameter val="1" idActiveInteractions="PTEN:mTOR2:1 AKT:mTOR2:1 Sirt1:mTOR2:1 mTOR1:mTOR2:1"/>
+      <parameter val="1" idActiveInteractions="AMPK:mTOR2:1"/>
+      <parameter val="1" idActiveInteractions="AMPK:mTOR2:1 mTOR1:mTOR2:1"/>
+      <parameter val="1" idActiveInteractions="AMPK:mTOR2:1 Sirt1:mTOR2:1"/>
+      <parameter val="1" idActiveInteractions="AMPK:mTOR2:1 AKT:mTOR2:1"/>
+      <parameter val="1" idActiveInteractions="AMPK:mTOR2:1 AKT:mTOR2:1 mTOR1:mTOR2:1"/>
+      <parameter val="1" idActiveInteractions="AMPK:mTOR2:1 AKT:mTOR2:1 Sirt1:mTOR2:1"/>
+      <parameter val="1" idActiveInteractions="AMPK:mTOR2:1 AKT:mTOR2:1 Sirt1:mTOR2:1 mTOR1:mTOR2:1"/>
+      <parameter val="1" idActiveInteractions="AMPK:mTOR2:1 PTEN:mTOR2:1 AKT:mTOR2:1"/>
+      <parameter val="1" idActiveInteractions="AMPK:mTOR2:1 PTEN:mTOR2:1 AKT:mTOR2:1 mTOR1:mTOR2:1"/>
+      <parameter val="1" idActiveInteractions="AMPK:mTOR2:1 PTEN:mTOR2:1 AKT:mTOR2:1 Sirt1:mTOR2:1"/>
+      <parameter val="1" idActiveInteractions="AMPK:mTOR2:1 PTEN:mTOR2:1 AKT:mTOR2:1 Sirt1:mTOR2:1 mTOR1:mTOR2:1"/>
+    </node>
+    <node id="RB" maxvalue="1">
+      <parameter val="1"/>
+      <parameter val="1" idActiveInteractions="Cdk1_CycB:RB:1"/>
+      <parameter val="1" idActiveInteractions="Cdk2_CycA2:RB:1"/>
+      <parameter val="1" idActiveInteractions="Cdk2_CycA2:RB:1 Cdk1_CycB:RB:1"/>
+      <parameter val="1" idActiveInteractions="Cdc25:RB:1"/>
+      <parameter val="1" idActiveInteractions="Cdc25:RB:1 Cdk1_CycB:RB:1"/>
+      <parameter val="1" idActiveInteractions="Cdc25:RB:1 Cdk2_CycA2:RB:1"/>
+    </node>
+    <node id="E2F1" maxvalue="1">
+      <parameter val="1"/>
+      <parameter val="1" idActiveInteractions="Cdc25:E2F1:1"/>
+      <parameter val="1" idActiveInteractions="Sirt1:E2F1:1"/>
+      <parameter val="1" idActiveInteractions="Sirt1:E2F1:1 Cdc25:E2F1:1"/>
+      <parameter val="1" idActiveInteractions="Myc:E2F1:1"/>
+      <parameter val="1" idActiveInteractions="Myc:E2F1:1 Cdc25:E2F1:1"/>
+      <parameter val="1" idActiveInteractions="Myc:E2F1:1 RB:E2F1:1"/>
+      <parameter val="1" idActiveInteractions="Myc:E2F1:1 RB:E2F1:1 Cdc25:E2F1:1"/>
+      <parameter val="1" idActiveInteractions="Sirt1:E2F1:1 Myc:E2F1:1"/>
+      <parameter val="1" idActiveInteractions="Sirt1:E2F1:1 Myc:E2F1:1 Cdc25:E2F1:1"/>
+      <parameter val="1" idActiveInteractions="Sirt1:E2F1:1 Myc:E2F1:1 RB:E2F1:1"/>
+      <parameter val="1" idActiveInteractions="Sirt1:E2F1:1 Myc:E2F1:1 RB:E2F1:1 Cdc25:E2F1:1"/>
+      <parameter val="1" idActiveInteractions="PTEN:E2F1:1"/>
+      <parameter val="1" idActiveInteractions="PTEN:E2F1:1 Cdc25:E2F1:1"/>
+      <parameter val="1" idActiveInteractions="PTEN:E2F1:1 Myc:E2F1:1"/>
+      <parameter val="1" idActiveInteractions="PTEN:E2F1:1 Myc:E2F1:1 Cdc25:E2F1:1"/>
+      <parameter val="1" idActiveInteractions="PTEN:E2F1:1 Myc:E2F1:1 RB:E2F1:1"/>
+      <parameter val="1" idActiveInteractions="PTEN:E2F1:1 Myc:E2F1:1 RB:E2F1:1 Cdc25:E2F1:1"/>
+      <parameter val="1" idActiveInteractions="PTEN:E2F1:1 Sirt1:E2F1:1 Myc:E2F1:1"/>
+      <parameter val="1" idActiveInteractions="PTEN:E2F1:1 Sirt1:E2F1:1 Myc:E2F1:1 Cdc25:E2F1:1"/>
+      <parameter val="1" idActiveInteractions="PTEN:E2F1:1 Sirt1:E2F1:1 Myc:E2F1:1 RB:E2F1:1"/>
+      <parameter val="1" idActiveInteractions="PTEN:E2F1:1 Sirt1:E2F1:1 Myc:E2F1:1 RB:E2F1:1 Cdc25:E2F1:1"/>
+      <parameter val="1" idActiveInteractions="ATM:E2F1:1"/>
+      <parameter val="1" idActiveInteractions="ATM:E2F1:1 Cdc25:E2F1:1"/>
+      <parameter val="1" idActiveInteractions="ATM:E2F1:1 Sirt1:E2F1:1"/>
+      <parameter val="1" idActiveInteractions="ATM:E2F1:1 Sirt1:E2F1:1 Cdc25:E2F1:1"/>
+      <parameter val="1" idActiveInteractions="ATM:E2F1:1 Myc:E2F1:1"/>
+      <parameter val="1" idActiveInteractions="ATM:E2F1:1 Myc:E2F1:1 Cdc25:E2F1:1"/>
+      <parameter val="1" idActiveInteractions="ATM:E2F1:1 Myc:E2F1:1 RB:E2F1:1"/>
+      <parameter val="1" idActiveInteractions="ATM:E2F1:1 Myc:E2F1:1 RB:E2F1:1 Cdc25:E2F1:1"/>
+      <parameter val="1" idActiveInteractions="ATM:E2F1:1 Sirt1:E2F1:1 Myc:E2F1:1"/>
+      <parameter val="1" idActiveInteractions="ATM:E2F1:1 Sirt1:E2F1:1 Myc:E2F1:1 Cdc25:E2F1:1"/>
+      <parameter val="1" idActiveInteractions="ATM:E2F1:1 Sirt1:E2F1:1 Myc:E2F1:1 RB:E2F1:1"/>
+      <parameter val="1" idActiveInteractions="ATM:E2F1:1 Sirt1:E2F1:1 Myc:E2F1:1 RB:E2F1:1 Cdc25:E2F1:1"/>
+      <parameter val="1" idActiveInteractions="ATM:E2F1:1 PTEN:E2F1:1"/>
+      <parameter val="1" idActiveInteractions="ATM:E2F1:1 PTEN:E2F1:1 Cdc25:E2F1:1"/>
+      <parameter val="1" idActiveInteractions="ATM:E2F1:1 PTEN:E2F1:1 Myc:E2F1:1"/>
+      <parameter val="1" idActiveInteractions="ATM:E2F1:1 PTEN:E2F1:1 Myc:E2F1:1 Cdc25:E2F1:1"/>
+      <parameter val="1" idActiveInteractions="ATM:E2F1:1 PTEN:E2F1:1 Myc:E2F1:1 RB:E2F1:1"/>
+      <parameter val="1" idActiveInteractions="ATM:E2F1:1 PTEN:E2F1:1 Myc:E2F1:1 RB:E2F1:1 Cdc25:E2F1:1"/>
+      <parameter val="1" idActiveInteractions="ATM:E2F1:1 PTEN:E2F1:1 Sirt1:E2F1:1 Cdc25:E2F1:1"/>
+      <parameter val="1" idActiveInteractions="ATM:E2F1:1 PTEN:E2F1:1 Sirt1:E2F1:1 Myc:E2F1:1"/>
+      <parameter val="1" idActiveInteractions="ATM:E2F1:1 PTEN:E2F1:1 Sirt1:E2F1:1 Myc:E2F1:1 Cdc25:E2F1:1"/>
+      <parameter val="1" idActiveInteractions="ATM:E2F1:1 PTEN:E2F1:1 Sirt1:E2F1:1 Myc:E2F1:1 RB:E2F1:1"/>
+      <parameter val="1" idActiveInteractions="ATM:E2F1:1 PTEN:E2F1:1 Sirt1:E2F1:1 Myc:E2F1:1 RB:E2F1:1 Cdc25:E2F1:1"/>
+    </node>
+    <node id="Cdc25" maxvalue="1">
+      <parameter val="1"/>
+      <parameter val="1" idActiveInteractions="AMPK:Cdc25:1"/>
+      <parameter val="1" idActiveInteractions="ATM:Cdc25:1"/>
+    </node>
+    <node id="Cdk2_CycA2" maxvalue="1">
+      <parameter val="1" idActiveInteractions="Cdc25:Cdk2_CycA2:1"/>
+    </node>
+    <node id="Cdk1_CycB" maxvalue="1">
+      <parameter val="1" idActiveInteractions="Cdc25:Cdk1_CycB:1"/>
+    </node>
+    <node id="BCL2" maxvalue="1">
+      <parameter val="1"/>
+      <parameter val="1" idActiveInteractions="E2F1:BCL2:1"/>
+      <parameter val="1" idActiveInteractions="PTEN:BCL2:1 E2F1:BCL2:1"/>
+      <parameter val="1" idActiveInteractions="p53_K:BCL2:1"/>
+      <parameter val="1" idActiveInteractions="p53_K:BCL2:1 E2F1:BCL2:1"/>
+    </node>
+    <node id="BAX" maxvalue="1">
+      <parameter val="1" idActiveInteractions="p53_K:BAX:1"/>
+    </node>
+    <node id="Caspase3" maxvalue="1">
+      <parameter val="1" idActiveInteractions="BAX:Caspase3:1"/>
+      <parameter val="1" idActiveInteractions="BCL2:Caspase3:1 BAX:Caspase3:1"/>
+      <parameter val="1" idActiveInteractions="p21:Caspase3:1 BAX:Caspase3:1"/>
+    </node>
+    <node id="ULK1" maxvalue="1">
+      <parameter val="1" idActiveInteractions="AMPK:ULK1:1"/>
+    </node>
+    <node id="NFKB" maxvalue="1">
+      <parameter val="1"/>
+    </node>
+    <node id="YY1" maxvalue="1">
+      <parameter val="1" idActiveInteractions="NFKB:YY1:1"/>
+    </node>
+    <node id="EZH2" maxvalue="1">
+      <parameter val="1" idActiveInteractions="YY1:EZH2:1"/>
+    </node>
+    <node id="SNAIL" maxvalue="1">
+      <parameter val="1" idActiveInteractions="AKT:SNAIL:1 NFKB:SNAIL:1 EZH2:SNAIL:1"/>
+    </node>
+    <node id="ZEB1" maxvalue="1">
+      <parameter val="1" idActiveInteractions="SNAIL:ZEB1:1"/>
+    </node>
+    <node id="VIM1" maxvalue="1">
+      <parameter val="1" idActiveInteractions="SNAIL:VIM1:1 ZEB1:VIM1:1"/>
+    </node>
+    <node id="CDH1" maxvalue="1">
+      <parameter val="1"/>
+    </node>
+    <node id="DRUG_RESISTANCE" maxvalue="1">
+      <parameter val="1" idActiveInteractions="BCL2:DRUG_RESISTANCE:1"/>
+      <parameter val="1" idActiveInteractions="E2F1:DRUG_RESISTANCE:1"/>
+      <parameter val="1" idActiveInteractions="E2F1:DRUG_RESISTANCE:1 BCL2:DRUG_RESISTANCE:1"/>
+    </node>
+    <node id="CYCLE_ARREST" maxvalue="1">
+      <parameter val="1" idActiveInteractions="p21:CYCLE_ARREST:1"/>
+    </node>
+    <node id="SENESCENCE" maxvalue="1">
+      <parameter val="1" idActiveInteractions="p21:SENESCENCE:1 mTOR2:SENESCENCE:1"/>
+    </node>
+    <node id="AUTOPHAGY" maxvalue="1">
+      <parameter val="1" idActiveInteractions="ULK1:AUTOPHAGY:1"/>
+    </node>
+    <node id="APOPTOSIS" maxvalue="1">
+      <parameter val="1" idActiveInteractions="Caspase3:APOPTOSIS:1"/>
+    </node>
+    <node id="EMT" maxvalue="1">
+      <parameter val="1" idActiveInteractions="VIM1:EMT:1"/>
+    </node>
+    <edge id="DNA_Damage:DNA_Damage:1" from="DNA_Damage" to="DNA_Damage" sign="positive" minvalue="1"/>
+    <edge id="DNA_Damage:ATM:1" from="DNA_Damage" to="ATM" sign="positive" minvalue="1"/>
+    <edge id="BMI1:ATM:1" from="BMI1" to="ATM" sign="negative" minvalue="1"/>
+    <edge id="Wip1:ATM:1" from="Wip1" to="ATM" sign="negative" minvalue="1"/>
+    <edge id="E2F1:ATM:1" from="E2F1" to="ATM" sign="positive" minvalue="1"/>
+    <edge id="Cdc25:ATM:1" from="Cdc25" to="ATM" sign="negative" minvalue="1"/>
+    <edge id="ATM:AMPK:1" from="ATM" to="AMPK" sign="positive" minvalue="1"/>
+    <edge id="Wip1:AMPK:1" from="Wip1" to="AMPK" sign="negative" minvalue="1"/>
+    <edge id="ATM:Mdm2:1" from="ATM" to="Mdm2" sign="negative" minvalue="1"/>
+    <edge id="p53:Mdm2:1" from="p53" to="Mdm2" sign="positive" minvalue="1"/>
+    <edge id="PTEN:Mdm2:1" from="PTEN" to="Mdm2" sign="negative" minvalue="1"/>
+    <edge id="AKT:Mdm2:1" from="AKT" to="Mdm2" sign="positive" minvalue="1"/>
+    <edge id="Wip1:Mdm2:1" from="Wip1" to="Mdm2" sign="negative" minvalue="1"/>
+    <edge id="ATM:p53:1" from="ATM" to="p53" sign="positive" minvalue="1"/>
+    <edge id="AMPK:p53:1" from="AMPK" to="p53" sign="positive" minvalue="1"/>
+    <edge id="Mdm2:p53:1" from="Mdm2" to="p53" sign="negative" minvalue="1"/>
+    <edge id="YY1:p53:1" from="YY1" to="p53" sign="negative" minvalue="1"/>
+    <edge id="p53:p53_A:1" from="p53" to="p53_A" sign="positive" minvalue="1"/>
+    <edge id="p53INP1:p53_A:1" from="p53INP1" to="p53_A" sign="negative" minvalue="1"/>
+    <edge id="p53_K:p53_A:1" from="p53_K" to="p53_A" sign="negative" minvalue="1"/>
+    <edge id="Sirt1:p53_A:1" from="Sirt1" to="p53_A" sign="negative" minvalue="1"/>
+    <edge id="p53_A:p53INP1:1" from="p53_A" to="p53INP1" sign="positive" minvalue="1"/>
+    <edge id="p53_K:p53INP1:1" from="p53_K" to="p53INP1" sign="positive" minvalue="1"/>
+    <edge id="p53:p53_K:1" from="p53" to="p53_K" sign="positive" minvalue="1"/>
+    <edge id="p53_A:p53_K:1" from="p53_A" to="p53_K" sign="negative" minvalue="1"/>
+    <edge id="Sirt1:p53_K:1" from="Sirt1" to="p53_K" sign="negative" minvalue="1"/>
+    <edge id="Wip1:p53_K:1" from="Wip1" to="p53_K" sign="negative" minvalue="1"/>
+    <edge id="PTENP1:miR_21:1" from="PTENP1" to="miR_21" sign="negative" minvalue="1"/>
+    <edge id="AKT:miR_21:1" from="AKT" to="miR_21" sign="positive" minvalue="1"/>
+    <edge id="E2F1:miR_21:1" from="E2F1" to="miR_21" sign="positive" minvalue="1"/>
+    <edge id="ATM:PTEN:1" from="ATM" to="PTEN" sign="positive" minvalue="1"/>
+    <edge id="p53_K:PTEN:1" from="p53_K" to="PTEN" sign="positive" minvalue="1"/>
+    <edge id="miR_21:PTEN:1" from="miR_21" to="PTEN" sign="negative" minvalue="1"/>
+    <edge id="YY1:PTEN:1" from="YY1" to="PTEN" sign="negative" minvalue="1"/>
+    <edge id="SNAIL:PTEN:1" from="SNAIL" to="PTEN" sign="negative" minvalue="1"/>
+    <edge id="PTEN:PTENP1:1" from="PTEN" to="PTENP1" sign="positive" minvalue="1"/>
+    <edge id="PTEN:AKT:1" from="PTEN" to="AKT" sign="negative" minvalue="1"/>
+    <edge id="mTOR2:AKT:1" from="mTOR2" to="AKT" sign="positive" minvalue="1"/>
+    <edge id="PTEN:BMI1:1" from="PTEN" to="BMI1" sign="negative" minvalue="1"/>
+    <edge id="AMPK:p21:1" from="AMPK" to="p21" sign="positive" minvalue="1"/>
+    <edge id="p53_A:p21:1" from="p53_A" to="p21" sign="positive" minvalue="1"/>
+    <edge id="AKT:p21:1" from="AKT" to="p21" sign="negative" minvalue="1"/>
+    <edge id="BMI1:p21:1" from="BMI1" to="p21" sign="negative" minvalue="1"/>
+    <edge id="Myc:p21:1" from="Myc" to="p21" sign="negative" minvalue="1"/>
+    <edge id="E2F1:p21:1" from="E2F1" to="p21" sign="negative" minvalue="1"/>
+    <edge id="Caspase3:p21:1" from="Caspase3" to="p21" sign="negative" minvalue="1"/>
+    <edge id="p53_A:RKIP:1" from="p53_A" to="RKIP" sign="positive" minvalue="1"/>
+    <edge id="SNAIL:RKIP:1" from="SNAIL" to="RKIP" sign="negative" minvalue="1"/>
+    <edge id="AKT:Wee1:1" from="AKT" to="Wee1" sign="negative" minvalue="1"/>
+    <edge id="E2F1:Sirt1:1" from="E2F1" to="Sirt1" sign="positive" minvalue="1"/>
+    <edge id="p53_A:Wip1:1" from="p53_A" to="Wip1" sign="positive" minvalue="1"/>
+    <edge id="AMPK:Myc:1" from="AMPK" to="Myc" sign="positive" minvalue="1"/>
+    <edge id="AKT:Myc:1" from="AKT" to="Myc" sign="positive" minvalue="1"/>
+    <edge id="p21:Myc:1" from="p21" to="Myc" sign="negative" minvalue="1"/>
+    <edge id="RB:Myc:1" from="RB" to="Myc" sign="negative" minvalue="1"/>
+    <edge id="E2F1:Myc:1" from="E2F1" to="Myc" sign="positive" minvalue="1"/>
+    <edge id="AMPK:mTOR1:1" from="AMPK" to="mTOR1" sign="negative" minvalue="1"/>
+    <edge id="AKT:mTOR1:1" from="AKT" to="mTOR1" sign="positive" minvalue="1"/>
+    <edge id="ULK1:mTOR1:1" from="ULK1" to="mTOR1" sign="negative" minvalue="1"/>
+    <edge id="AMPK:mTOR2:1" from="AMPK" to="mTOR2" sign="negative" minvalue="1"/>
+    <edge id="PTEN:mTOR2:1" from="PTEN" to="mTOR2" sign="negative" minvalue="1"/>
+    <edge id="AKT:mTOR2:1" from="AKT" to="mTOR2" sign="positive" minvalue="1"/>
+    <edge id="Sirt1:mTOR2:1" from="Sirt1" to="mTOR2" sign="negative" minvalue="1"/>
+    <edge id="mTOR1:mTOR2:1" from="mTOR1" to="mTOR2" sign="negative" minvalue="1"/>
+    <edge id="Cdc25:RB:1" from="Cdc25" to="RB" sign="negative" minvalue="1"/>
+    <edge id="Cdk2_CycA2:RB:1" from="Cdk2_CycA2" to="RB" sign="negative" minvalue="1"/>
+    <edge id="Cdk1_CycB:RB:1" from="Cdk1_CycB" to="RB" sign="negative" minvalue="1"/>
+    <edge id="ATM:E2F1:1" from="ATM" to="E2F1" sign="positive" minvalue="1"/>
+    <edge id="PTEN:E2F1:1" from="PTEN" to="E2F1" sign="negative" minvalue="1"/>
+    <edge id="Sirt1:E2F1:1" from="Sirt1" to="E2F1" sign="negative" minvalue="1"/>
+    <edge id="Myc:E2F1:1" from="Myc" to="E2F1" sign="positive" minvalue="1"/>
+    <edge id="RB:E2F1:1" from="RB" to="E2F1" sign="negative" minvalue="1"/>
+    <edge id="Cdc25:E2F1:1" from="Cdc25" to="E2F1" sign="positive" minvalue="1"/>
+    <edge id="ATM:Cdc25:1" from="ATM" to="Cdc25" sign="negative" minvalue="1"/>
+    <edge id="AMPK:Cdc25:1" from="AMPK" to="Cdc25" sign="negative" minvalue="1"/>
+    <edge id="PTEN:Cdc25:1" from="PTEN" to="Cdc25" sign="negative" minvalue="1"/>
+    <edge id="Wee1:Cdc25:1" from="Wee1" to="Cdc25" sign="negative" minvalue="1"/>
+    <edge id="PTENP1:Cdk2_CycA2:1" from="PTENP1" to="Cdk2_CycA2" sign="negative" minvalue="1"/>
+    <edge id="p21:Cdk2_CycA2:1" from="p21" to="Cdk2_CycA2" sign="negative" minvalue="1"/>
+    <edge id="Wee1:Cdk2_CycA2:1" from="Wee1" to="Cdk2_CycA2" sign="negative" minvalue="1"/>
+    <edge id="Cdc25:Cdk2_CycA2:1" from="Cdc25" to="Cdk2_CycA2" sign="positive" minvalue="1"/>
+    <edge id="PTEN:Cdk1_CycB:1" from="PTEN" to="Cdk1_CycB" sign="negative" minvalue="1"/>
+    <edge id="p21:Cdk1_CycB:1" from="p21" to="Cdk1_CycB" sign="negative" minvalue="1"/>
+    <edge id="Wee1:Cdk1_CycB:1" from="Wee1" to="Cdk1_CycB" sign="negative" minvalue="1"/>
+    <edge id="Cdc25:Cdk1_CycB:1" from="Cdc25" to="Cdk1_CycB" sign="positive" minvalue="1"/>
+    <edge id="p53_K:BCL2:1" from="p53_K" to="BCL2" sign="negative" minvalue="1"/>
+    <edge id="PTEN:BCL2:1" from="PTEN" to="BCL2" sign="negative" minvalue="1"/>
+    <edge id="E2F1:BCL2:1" from="E2F1" to="BCL2" sign="positive" minvalue="1"/>
+    <edge id="p53_K:BAX:1" from="p53_K" to="BAX" sign="positive" minvalue="1"/>
+    <edge id="BCL2:BAX:1" from="BCL2" to="BAX" sign="negative" minvalue="1"/>
+    <edge id="p21:Caspase3:1" from="p21" to="Caspase3" sign="negative" minvalue="1"/>
+    <edge id="BCL2:Caspase3:1" from="BCL2" to="Caspase3" sign="negative" minvalue="1"/>
+    <edge id="BAX:Caspase3:1" from="BAX" to="Caspase3" sign="positive" minvalue="1"/>
+    <edge id="AMPK:ULK1:1" from="AMPK" to="ULK1" sign="positive" minvalue="1"/>
+    <edge id="mTOR1:ULK1:1" from="mTOR1" to="ULK1" sign="negative" minvalue="1"/>
+    <edge id="mTOR2:ULK1:1" from="mTOR2" to="ULK1" sign="negative" minvalue="1"/>
+    <edge id="PTEN:NFKB:1" from="PTEN" to="NFKB" sign="negative" minvalue="1"/>
+    <edge id="RKIP:NFKB:1" from="RKIP" to="NFKB" sign="negative" minvalue="1"/>
+    <edge id="PTENP1:YY1:1" from="PTENP1" to="YY1" sign="negative" minvalue="1"/>
+    <edge id="NFKB:YY1:1" from="NFKB" to="YY1" sign="positive" minvalue="1"/>
+    <edge id="YY1:EZH2:1" from="YY1" to="EZH2" sign="positive" minvalue="1"/>
+    <edge id="AKT:SNAIL:1" from="AKT" to="SNAIL" sign="positive" minvalue="1"/>
+    <edge id="NFKB:SNAIL:1" from="NFKB" to="SNAIL" sign="positive" minvalue="1"/>
+    <edge id="EZH2:SNAIL:1" from="EZH2" to="SNAIL" sign="positive" minvalue="1"/>
+    <edge id="SNAIL:ZEB1:1" from="SNAIL" to="ZEB1" sign="positive" minvalue="1"/>
+    <edge id="SNAIL:VIM1:1" from="SNAIL" to="VIM1" sign="positive" minvalue="1"/>
+    <edge id="ZEB1:VIM1:1" from="ZEB1" to="VIM1" sign="positive" minvalue="1"/>
+    <edge id="ZEB1:CDH1:1" from="ZEB1" to="CDH1" sign="negative" minvalue="1"/>
+    <edge id="E2F1:DRUG_RESISTANCE:1" from="E2F1" to="DRUG_RESISTANCE" sign="positive" minvalue="1"/>
+    <edge id="BCL2:DRUG_RESISTANCE:1" from="BCL2" to="DRUG_RESISTANCE" sign="positive" minvalue="1"/>
+    <edge id="p21:CYCLE_ARREST:1" from="p21" to="CYCLE_ARREST" sign="positive" minvalue="1"/>
+    <edge id="p21:SENESCENCE:1" from="p21" to="SENESCENCE" sign="positive" minvalue="1"/>
+    <edge id="mTOR2:SENESCENCE:1" from="mTOR2" to="SENESCENCE" sign="positive" minvalue="1"/>
+    <edge id="ULK1:AUTOPHAGY:1" from="ULK1" to="AUTOPHAGY" sign="positive" minvalue="1"/>
+    <edge id="Caspase3:APOPTOSIS:1" from="Caspase3" to="APOPTOSIS" sign="positive" minvalue="1"/>
+    <edge id="ULK1:APOPTOSIS:1" from="ULK1" to="APOPTOSIS" sign="negative" minvalue="1"/>
+    <edge id="VIM1:EMT:1" from="VIM1" to="EMT" sign="positive" minvalue="1"/>
+    <edge id="CDH1:EMT:1" from="CDH1" to="EMT" sign="negative" minvalue="1"/>
+  </graph>
+</gxl>
